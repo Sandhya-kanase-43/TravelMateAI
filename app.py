@@ -33,37 +33,93 @@ Keep responses clear, organized, and beginner-friendly.
 
 # STEP 9: Add Top Navigation Bar
 
+
+# STEP 9: Improve UI readability and color contrast
+
 st.markdown("""
 <style>
 .stApp {
     background-color: #0e1117;
-    color: #f4f7fb;
+    color: #f8fafc;
 }
 
-.travelmate-brand {
-    font-size: 24px;
-    font-weight: 700;
-    padding-top: 6px;
+[data-testid="stHeader"] {
+    background-color: #0e1117;
 }
 
-.travelmate-caption {
-    color: #aab8cc;
-    font-size: 12px;
+h1, h2, h3, h4, h5, h6 {
+    color: #ffffff !important;
+}
+
+.stMarkdown, .stMarkdown p, .stMarkdown li,
+.stText, [data-testid="stCaptionContainer"] {
+    color: #e2e8f0;
+}
+
+label, [data-testid="stWidgetLabel"] p {
+    color: #f1f5f9 !important;
 }
 
 div[role="radiogroup"] {
-    gap: 5px;
+    gap: 8px;
 }
 
 div[role="radiogroup"] label {
-    background-color: #1a2230;
-    border: 1px solid #29364a;
+    background-color: #1e293b;
+    border: 1px solid #475569;
     border-radius: 10px;
-    padding: 7px 10px;
+    padding: 8px 12px;
+}
+
+div[role="radiogroup"] label p,
+div[role="radiogroup"] label span {
+    color: #f8fafc !important;
 }
 
 div[role="radiogroup"] label:hover {
-    border-color: #3984f7;
+    border-color: #60a5fa;
+}
+
+.stTextInput input,
+.stNumberInput input,
+.stTextArea textarea,
+[data-testid="stChatInput"] textarea {
+    background-color: #ffffff !important;
+    color: #111827 !important;
+    border: 1px solid #94a3b8 !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #64748b !important;
+    opacity: 1;
+}
+
+.stButton button,
+.stFormSubmitButton button {
+    background-color: #2563eb !important;
+    color: #ffffff !important;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.stButton button:hover,
+.stFormSubmitButton button:hover {
+    background-color: #1d4ed8 !important;
+}
+
+[data-testid="stChatMessage"] {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 12px;
+}
+
+hr {
+    border-color: #334155;
+}
+
+[data-testid="stAlert"] {
+    border-radius: 10px;
 }
 </style>
 """, unsafe_allow_html=True)
